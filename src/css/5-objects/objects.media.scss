@@ -1,0 +1,28 @@
+// Media
+//
+// The media object can save you hundreds of line of code.
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+// An alternative css object is the flag object.
+//
+// Styleguide Objects.Media
+
+/* $ Media.
+   ======================================== */
+.o-media,
+.o-media__body {
+  overflow:hidden;
+}
+
+.o-media__img {
+  float:left;
+  padding-right: 10px;
+
+  > img {
+    display:block;    
+  }
+
+  .o-media--rev & {
+    float:right;
+    padding-left: 10px;
+  }
+}

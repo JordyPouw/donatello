@@ -1,0 +1,15 @@
+/* $ Table.
+   ======================================== */
+.o-table {
+  width: 100%;
+  
+  &__row {
+    display: table-row;
+    width: auto;
+  }
+
+  &__cell {
+    display: table-cell;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+/* $ Html and body.
+   ======================================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  color: $black;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+}

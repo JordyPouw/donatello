@@ -1,0 +1,20 @@
+/* $ Embedded content.
+   ======================================== */
+
+// fluid-width media that maintain their aspect ratios.
+img,
+video,
+audio,
+embed,
+object {
+  max-width: 100%;
+  display: block;
+}
+
+// remove the gap between images, videos, audio and canvas and the bottom of their containers.
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}

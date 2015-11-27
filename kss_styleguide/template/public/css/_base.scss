@@ -1,0 +1,53 @@
+html {
+  font-size: 100%;
+}
+
+html, body {
+  height: auto;
+  min-height: 100%;
+  font-family: sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+a:hover, 
+a:focus {
+  color: $black;
+  text-decoration: none;
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+img,
+video,
+audio,
+embed,
+object {
+  max-width: 100%;
+  display: block;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}

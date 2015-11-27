@@ -1,0 +1,11 @@
+{
+  "name": "stamkracht-kss-node-template",
+  "version": "1.0.0",
+  "description": "Customized template for Stamkracht projects.",
+  "main": "template_config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+  }
+}

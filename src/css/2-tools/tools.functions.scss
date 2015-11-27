@@ -1,0 +1,26 @@
+// Functions
+//
+// em($target, $context: $default-font-size)     - transform pixel to em.
+// rem($target, $context: $default-font-size)    - transform pixel to rem.
+// mq-em($target)                             - transform media query pixel to em.
+//
+// Styleguide Tools.Functions
+
+
+// $ Calculate px to em.
+// ========================================
+@function em($target, $context: $default-font-size) {
+	@return ($target / $context) * 1em;
+}
+
+// $ Calculate px to rem.
+// ========================================
+@function rem($target, $context: $default-font-size) {
+  @return ($target / $context) * 1rem;
+}
+
+// $ Calculate px to em for media queries.
+// ========================================
+@function mq-em($target) {
+  @return ($target / 16px) * 1rem;
+}

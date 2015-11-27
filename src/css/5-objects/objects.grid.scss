@@ -1,0 +1,72 @@
+// Grid system
+//
+// The grid system Splinter is used to simplify responsive design. It's completely customizable 
+// at the beginning of a project. *Note: changing the grid settings during a project can break the layout.*
+// The 12 column grid has 3 breakpoints and is designed mobile first:
+// - sm: 568px
+// - md: 768px 
+// - lg: 1024px
+//
+// Markup:
+//<div class="g-row12">
+//  <div class="g-col12--xs g-col8--md">
+//    <article class="o-box"></article>
+//  </div>
+//  <div class="g-col12--xs g-col4--md">
+//    <article class="o-box"></article>
+//  </div>
+//</div>
+//
+// Styleguide Objects.Grid
+
+
+/* $ Grid system.
+   ======================================== */
+
+// grid clearfix.
+.#{$grid-prefix}#{$grid-row}:after {
+  content: '';
+  display: table;
+  clear: both;
+
+  .#{$grid-prefix}#{$grid-row} & {
+		content: '';
+		display: table;
+		clear: both;  	
+  }
+}
+
+// grid fundamentals.
+.#{$grid-prefix}#{$grid-row} {
+  width: 100%;
+  max-width: $grid-row-width;
+  margin: 0 auto;
+  &#{$grid-row-suffix} {
+    max-width: none;
+  }
+  & .#{$grid-prefix}#{$grid-row} {
+    width: auto;
+    max-width: none;
+    margin: 0 (-($grid-gutter-width / 2));
+  }
+}
+
+[class^="#{$grid-prefix}#{$grid-col}"], 
+[class*=" #{$grid-prefix}#{$grid-col}"] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 0 ($grid-gutter-width / 2);
+}
+
+// mobile first.
+@include make-grid($grid-suffix-xs);
+
+// small devices.
+@include grid-mq(min-sm) {@include make-grid($grid-suffix-sm);}
+
+// medium devices.
+@include grid-mq(min-md) {@include make-grid($grid-suffix-md);}
+
+// large devices.
+@include grid-mq(min-lg) {@include make-grid($grid-suffix-lg);}

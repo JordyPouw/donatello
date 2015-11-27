@@ -1,0 +1,44 @@
+// Flag
+//
+// http://csswizardry.com/2013/05/the-flag-object/
+//
+// Styleguide Objects.Flag
+
+/* $ Flag.
+   ======================================== */
+.o-flag {
+  display: table;
+  width: 100%;
+}
+
+.o-flag__img,
+.o-flag__body {
+  display: table-cell;
+  vertical-align: middle;
+
+  .o-flag--top & {
+    vertical-align: top;
+  }
+
+  .o-flag--bottom & {
+    vertical-align: bottom;
+  }
+}
+
+.o-flag__body {
+  width: 100%;
+}
+
+.o-flag__img {
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+
+  .o-flag--rev & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}

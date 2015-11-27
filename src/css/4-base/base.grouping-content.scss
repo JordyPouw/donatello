@@ -1,0 +1,12 @@
+/* $ Grouping content.
+   ======================================== */
+
+// a better looking thematic break.
+hr {
+  display: block;
+  height: 0.063em;
+  border: 0;
+  border-top: 0.063em solid $gray;
+  padding: 0;
+  margin-bottom: 1.250em;
+}

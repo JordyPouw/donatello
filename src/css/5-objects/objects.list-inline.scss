@@ -1,0 +1,21 @@
+/* $ List inline.
+   ======================================== */
+.o-list-inline {
+  margin-left: -15px;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  & > li {
+    float: left;
+    margin-left: 15px;
+  }
+  
+  // grid pattern.
+  &--grid > li {
+    margin-bottom: 15px;
+  }
+}

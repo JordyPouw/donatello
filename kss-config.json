@@ -1,0 +1,23 @@
+{
+
+  "title"       : "Donatello Styleguide",
+  "mask"        : "*.scss",
+  "placeholder" : "[modifier]",
+
+
+"//": "relative to this file.",
+  "homepage"     : "kss-styleguide.md",
+  "template"     : "kss_styleguide/template/",
+  "source"       : "src/",
+  "destination"  : "kss_styleguide/styleguide/",
+
+
+"//": "relative to the generated style guide.",
+  "css": ["../../dest/css/main.min.css"],
+  "js" : [
+          "../../dest/js/modernizr.min.js",
+          "../../dest/js/vendor.min.js",
+          "../../dest/js/main.min.js"
+         ]
+
+}

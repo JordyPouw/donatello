@@ -1,0 +1,31 @@
+/* $ Forms.
+   ======================================== */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 0;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline: 0 none;
+}
+
+::placeholder {
+  color: $gray;
+}

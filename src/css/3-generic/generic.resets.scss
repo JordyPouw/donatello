@@ -1,0 +1,17 @@
+/* $ Reset margin tags.
+   ======================================== */
+ul,
+ol,
+dl,
+dd,
+blockquote,
+hr,
+table,
+form,
+fieldset,
+figure,
+address 
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
