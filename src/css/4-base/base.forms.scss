@@ -1,3 +1,47 @@
+// Forms
+//
+// Markup:
+//<form>
+//  <fieldset>
+//  <legend>Legend: radio</legend>
+//    <label> Male
+//      <input type="radio" name="sex" value="male">
+//    </label>
+//    <label> Female
+//      <input type="radio" name="sex" value="female">
+//    </label>
+//  </fieldset>
+//  <fieldset>
+//  <legend>Legend: checkbox</legend>
+//    <label> Checkbox 1
+//      <input type="checkbox" name="checkbox" value="value1">
+//    </label>
+//    <label> Checkbox 2
+//      <input type="checkbox" name="checkbox" value="value2">
+//    </label>
+//  </fieldset>
+//  <fieldset>
+//  <legend>Legend: select</legend>
+//    <select name="select">
+//      <option value="value1">Value 1</option> 
+//      <option value="value2" selected>Value 2</option>
+//      <option value="value3">Value 3</option>
+//    </select>
+//  </fieldset>
+//  <fieldset>
+//  <legend>Legend: input</legend>
+//    <label> Email
+//      <input type="email" name="email" placeholder="name@email.com">
+//    </label>
+//    <label> Password
+//      <input type="password" name="password">
+//    </label>
+//  </fieldset>
+//  <button name="button">Click me</button>
+//</form>
+//
+// Styleguide Base.Forms
+
 /* $ Forms.
    ======================================== */
 fieldset {
