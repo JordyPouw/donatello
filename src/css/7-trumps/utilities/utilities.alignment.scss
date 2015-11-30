@@ -1,3 +1,18 @@
+// Alignment
+//
+// Aligns your text.
+// *When aligning inside a table layout the following utilities are also possible.*
+// - *u-align-top*
+// - *u-align-bottom*
+// - *u-align-middle*
+//
+// Markup:
+//<p class="u-align-left">Left</p>
+//<p class="u-align-center">Center</p>
+//<p class="u-align-right">Right</p>
+//
+// Styleguide Trumps.Utilities.Alignment
+
 /* $ Alignment.
    ======================================== */
 .u-align-left {
