@@ -1,3 +1,28 @@
+// Table
+//
+// When more flexibility is needed, it is wise to use the table object.
+//
+// Markup:
+//<div class="o-table">
+//  <div class="o-table__row">
+//    <div class="o-table__cell">Cell 1-1</div>
+//    <div class="o-table__cell">Cell 1-2</div>
+//    <div class="o-table__cell">Cell 1-3</div>
+//  </div>
+//  <div class="o-table__row">
+//    <div class="o-table__cell">Cell 2-1</div>
+//    <div class="o-table__cell">Cell 2-2</div>
+//    <div class="o-table__cell">Cell 2-3</div>
+//  </div>
+//  <div class="o-table__row">
+//    <div class="o-table__cell">Cell 3-1</div>
+//    <div class="o-table__cell">Cell 3-2</div>
+//    <div class="o-table__cell">Cell 3-3</div>
+//  </div>
+//</div>
+//
+// Styleguide Objects.Table
+
 /* $ Table.
    ======================================== */
 .o-table {

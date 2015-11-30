@@ -1,3 +1,17 @@
+// List
+//
+// Markup:
+//<ul class="o-list--style-none">
+//  <li>item 1</li>
+//  <li>item 2</li>
+//  <li>item 3</li>
+//  <li>item 4</li>
+//</ul>
+//
+// Styleguide Objects.List
+
+/* $ List.
+   ======================================== */
 .o-list--style-none {
   list-style: none;
   padding-left: 0;

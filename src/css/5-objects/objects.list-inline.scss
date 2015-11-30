@@ -1,7 +1,23 @@
+// List inline
+//
+// Inlines the list items
+//
+// Markup:
+//<ul class="o-list-inline">
+//  <li>item 1</li>
+//  <li>item 2</li>
+//  <li>item 3</li>
+//  <li>item 4</li>
+//</ul>
+//
+// Styleguide Objects.ListInline
+
 /* $ List inline.
    ======================================== */
 .o-list-inline {
+  list-style: none;
   margin-left: -15px;
+  padding-left: 0;
   
   &:after {
     content: '';
@@ -12,10 +28,5 @@
   & > li {
     float: left;
     margin-left: 15px;
-  }
-  
-  // grid pattern.
-  &--grid > li {
-    margin-bottom: 15px;
   }
 }
