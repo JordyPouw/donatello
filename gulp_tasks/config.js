@@ -7,6 +7,7 @@ module.exports = function(gulp){
     // plugins.
     browsersync    :   require('browser-sync'),
     browserify     :   require('browserify'),
+    babelify       :   require("babelify"),
     autoprefixer   :   require('autoprefixer'),
     vss            :   require('vinyl-source-stream'),
     buffer         :   require('vinyl-buffer'),
