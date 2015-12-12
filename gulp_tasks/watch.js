@@ -5,10 +5,10 @@ module.exports = function(gulp){
 
   var config = require('./config')();
 
-  gulp.task('watch', ['browsersync'], function(){
+  gulp.task('watch', ['server', 'browsersync'], function(){
 
     gulp.watch('bower.json', ['bower']);
-    gulp.watch('views/**/*.html').on('change', config.browsersync.reload);
+    gulp.watch('index.html').on('change', config.browsersync.reload);
     gulp.watch('src/css/**/*.scss', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);
 
