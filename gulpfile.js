@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 // task for development.
-gulp.task('default', ['bower', 'modernizr', 'css', 'js', 'img', 'font', 'sound', 'kss'], function(){
+gulp.task('default', ['bower', 'modernizr', 'css', 'js', 'img', 'font', 'sound', 'kss', 'server'], function(){
   gulp.start('watch');
 });
 
@@ -17,6 +17,7 @@ function task(task){
 }
 
 // all task modules.
+task('server');
 task('browsersync');
 task('watch');
 task('kss');
