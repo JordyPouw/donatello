@@ -12,6 +12,7 @@ module.exports = function(gulp){
     vss            :   require('vinyl-source-stream'),
     buffer         :   require('vinyl-buffer'),
     del            :   require('del'),
+    modernizr      :   require('modernizr'),
     plugins        :   require('gulp-load-plugins')({
       rename: {
         'gulp-minify-css': 'cssmin',
