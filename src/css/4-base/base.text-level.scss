@@ -29,19 +29,8 @@ h4,
 h5, 
 h6 {
   font-family: $default-heading-font-family;
+  font-size: $default-heading-font-size;
 }
-
-h1 {font-size: em($default-h1-font-size);}
-
-h2 {font-size: em($default-h2-font-size);}
-
-h3 {font-size: em($default-h3-font-size);}
-
-h4 {font-size: em($default-h4-font-size);}
-
-h5 {font-size: em($default-h5-font-size);}
-
-h6 {font-size: em($default-h6-font-size);}
 
 p {font-size: em($default-font-size);}
 
