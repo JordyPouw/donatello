@@ -1,0 +1,15 @@
+/* $ Button.
+   ======================================== */
+$c-button-border: 0;
+$c-button-padding: 5px 10px;
+$c-button-color: $black;
+$c-button-background: #CCC;
+
+.c-button {
+  display: inline-block;
+  border: $c-button-border;
+  padding: $c-button-padding;
+  text-align: center;
+  color: $c-button-color;
+  background: $c-button-background;
+}
