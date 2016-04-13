@@ -1,3 +1,26 @@
+// Input group
+//
+// Markup:
+//<form class="c-form" 
+//      action="">
+//  <fieldset class="c-form__group">
+//    <legend class="c-form__group-title">Show me the money</legend>
+//      <label class="c-form__control">
+//        How much can you lose?
+//        <div class="c-input-group">
+//          <span class="c-input-group__label">€</span>
+//          <input class="c-input-group__field" type="number" placeholder="over 9000!">
+//          <div class="c-input-group__button">
+//            <button>This much</button>
+//          </div>
+//        </div>
+//      </label>
+//  </fieldset>
+//</form>
+//
+// Styleguide Components.InputGroup
+
+
 /* $ Input group.
    ======================================== */
 $c-input-group-border-color: #c0392b;
