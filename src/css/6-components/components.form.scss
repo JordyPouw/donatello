@@ -1,0 +1,86 @@
+/* $ Forms.
+   ======================================== */
+$c-form-border-color: #c0392b;
+$c-form-font-color: #2c3e50;
+$c-form-placeholder: #95a5a6;
+
+.c-form {
+  color: $c-form-font-color;
+  font-size: 1rem;
+  & > .c-form__group:last-child {margin-bottom: 0;}
+  & ::placeholder {color: $c-form-placeholder;}
+}
+
+.c-form__group {
+  margin-bottom: 20px;
+  & > .c-form__control:last-child {margin-bottom: 0;}
+}
+
+.c-form__group-title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.125em;
+}
+
+.c-form__control {
+  display: block;
+  margin-bottom: 10px;
+
+  & label {display: block;}
+  
+  &--inline label {
+    padding: 8px 0px;
+    text-align: right;
+  }
+}
+
+.c-form__control input {
+  display: block;
+  width: 100%;
+  border: 1px solid $c-form-border-color;
+  padding: 7px 10px;
+
+  &[type="radio"],
+  &[type="checkbox"] {
+    display: inline-block;
+    width: 15px;
+    margin-right: 5px;
+  }
+
+  &[type="color"] {
+    height: 40px;
+    padding: 0;
+    border: 1px solid $c-form-border-color;
+    background: transparent;
+    cursor: pointer;
+    &::-webkit-color-swatch-wrapper {padding: 0;}
+  }
+
+  &[type="date"] {padding: 6px 10px;}
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+}
+
+.c-form__control textarea {
+  min-height: 80px;
+  border: 1px solid $c-form-border-color;
+}
+
+.c-form__control select {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: 1px solid $c-form-border-color;
+  
+  &[multiple] {min-height: 120px;}
+
+  & option {padding: 6px 10px;}
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+}
