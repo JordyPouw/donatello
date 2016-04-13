@@ -30,6 +30,7 @@ h5,
 h6 {
   font-family: $default-heading-font-family;
   font-size: $default-heading-font-size;
+  line-height: $default-heading-line-height;
 }
 
 p {font-size: em($default-font-size);}
