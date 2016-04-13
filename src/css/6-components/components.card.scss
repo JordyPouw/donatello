@@ -1,0 +1,24 @@
+// Card
+//
+// Markup:
+
+//
+// Styleguide Components.Button
+
+
+/* $ Button.
+   ======================================== */
+$c-card-border: 1px solid $black;
+$c-card-border-radius: 2px;
+$c-card-padding: 10px;
+$c-card-color: $black;
+$c-card-background: $white;
+
+.c-card {
+  display: block;
+  border: $c-card-border;
+  border-radius: $c-card-border-radius;
+  padding: $c-card-padding;
+  color: $c-card-color;
+  background: $c-card-background;
+}
