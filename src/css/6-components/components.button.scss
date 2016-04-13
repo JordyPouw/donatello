@@ -1,3 +1,13 @@
+// Button
+//
+// Markup:
+// <button class="c-button">button</button>
+// <a class="c-button">a-button</a>
+// <span class="c-button">span-button</span>
+//
+// Styleguide Components.Button
+
+
 /* $ Button.
    ======================================== */
 $c-button-border: 0;
@@ -9,7 +19,8 @@ $c-button-background: #CCC;
   display: inline-block;
   border: $c-button-border;
   padding: $c-button-padding;
-  text-align: center;
   color: $c-button-color;
   background: $c-button-background;
+  text-align: center;
+  cursor: pointer;
 }
