@@ -1,0 +1,51 @@
+/* $ Input group.
+   ======================================== */
+$c-input-group-border-color: #c0392b;
+$c-input-group-font-color: #2c3e50;
+$c-input-group-placeholder: #95a5a6;
+
+.c-input-group {
+  display: table;
+  width: 100%;
+  color: $c-input-group-font-color;
+  & ::placeholder {color: $c-input-group-placeholder;}
+}
+
+.c-input-group .c-input-group__label {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  padding: 0px 10px;
+  background: $gray;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c-input-group .c-input-group__field {
+  display: table-cell;
+  width: 100%;
+  border: 1px solid $c-input-group-border-color;
+  padding: 7px 10px;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.c-input-group .c-input-group__button {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  
+  & a,
+  & input[type="submit"],
+  & button {
+    display: block;
+    border: 0;
+    padding: 8px 10px;
+    cursor: pointer;
+    background: $gray;}
+}
