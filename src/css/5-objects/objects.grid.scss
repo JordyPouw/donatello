@@ -60,13 +60,13 @@
 }
 
 // mobile first.
-@include make-grid($grid-suffix-xs);
+@include build-grid($grid-suffix-xs);
 
 // small devices.
-@include grid-mq(min-sm) {@include make-grid($grid-suffix-sm);}
+@include grid-mq(min-sm) {@include build-grid($grid-suffix-sm);}
 
 // medium devices.
-@include grid-mq(min-md) {@include make-grid($grid-suffix-md);}
+@include grid-mq(min-md) {@include build-grid($grid-suffix-md);}
 
 // large devices.
-@include grid-mq(min-lg) {@include make-grid($grid-suffix-lg);}
+@include grid-mq(min-lg) {@include build-grid($grid-suffix-lg);}
