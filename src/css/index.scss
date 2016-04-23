@@ -2,8 +2,12 @@
 @import '1-settings/settings.fonts.scss';
 @import '1-settings/settings.grid.scss';
 
-@import '2-tools/tools.functions.scss';
-@import '2-tools/tools.mixins.scss';
+@import '2-tools/functions/functions.em.scss';
+@import '2-tools/functions/functions.rem.scss';
+@import '2-tools/functions/functions.mq-unit.scss';
+
+@import '2-tools/mixins/mixins.grid.scss';
+@import '2-tools/mixins/mixins.custom-mq.scss';
 
 @import '3-generic/generic.box-sizing.scss';
 @import '3-generic/generic.normalize.scss';
@@ -15,7 +19,7 @@
 @import '4-base/base.tables.scss';
 @import '4-base/base.embedded-content.scss';
 @import '4-base/base.grouping-content.scss';
-@import '4-base/base.html-body.scss';
+@import '4-base/base.body.scss';
 @import '4-base/base.text-level.scss';
 
 @import '5-objects/objects.flag.scss';
