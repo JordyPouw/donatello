@@ -1,7 +1,7 @@
 {
-  "name": "stamkracht-kss-node-template",
+  "name": "donatello-kss-node-template",
   "version": "1.0.0",
-  "description": "Customized template for Stamkracht projects.",
+  "description": "Customized template for projects building upon Donatello.",
   "main": "template_config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
