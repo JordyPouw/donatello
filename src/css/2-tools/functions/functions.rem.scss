@@ -1,0 +1,11 @@
+// Calculate px to rem.
+//
+// rem($target, $context: $default-font-size) - transform pixel to rem.
+//
+// Styleguide Tools.Functions.PxToRem
+
+// $ Calculate px to rem.
+// ========================================
+@function rem($target, $context: $default-font-size) {
+  @return ($target / $context) * 1rem;
+}

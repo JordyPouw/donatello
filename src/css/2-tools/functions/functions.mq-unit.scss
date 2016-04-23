@@ -1,0 +1,12 @@
+// Calculate px to em for media queries.
+//
+// mq-unit($target) - transform media query pixel to em with a base of 16px (default browser font-size).
+//
+// Styleguide Tools.Functions.PxToMqUnit
+
+
+// $ Calculate px to em for media queries.
+// ========================================
+@function mq-unit($target) {
+  @return ($target / 16px) * 1em;
+}

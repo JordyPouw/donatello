@@ -1,0 +1,77 @@
+// Grid system
+//
+// grid-mq($width) - @include grid-mq(min/max-sm/md/lg)
+//
+// Styleguide Tools.Mixins.GridSystem
+
+
+// $ Grid settings.
+// ========================================
+@mixin grid-setting($grid-media-query, $grid-method, $prop) {
+  @for $index from 1 through $grid-columns {    
+    // if push or pull, add 0.
+    @if ($grid-method == $grid-push) and ($index == 1) or ($grid-method == $grid-pull) and ($index == 1){
+      .#{$grid-prefix}#{$grid-method}0#{$grid-media-query} {
+        #{$prop}: auto;
+      }
+    }
+    // if offset, add 0.
+    @if ($grid-method == $grid-offset) and ($index == 1){
+      .#{$grid-prefix}#{$grid-method}0#{$grid-media-query} {
+        #{$prop}: 0;
+      }
+    }   
+    // normal loop from 1 through x amount of columns.
+    .#{$grid-prefix}#{$grid-method}#{$index}#{$grid-media-query} {
+      #{$prop}: percentage(($index/$grid-columns));
+    }
+  }
+}
+
+
+// $ Build the grid.
+// ========================================
+@mixin build-grid($grid-media-query){
+  @include grid-setting($grid-media-query, $grid-col, width);
+  
+  @if($grid-create-push == true){
+    @include grid-setting($grid-media-query, $grid-push, left);
+  }
+  
+  @if($grid-create-pull == true){
+    @include grid-setting($grid-media-query, $grid-pull, right);
+  }
+  
+  @if($grid-create-offset == true){
+    @include grid-setting($grid-media-query, $grid-offset, margin-left);
+  }
+}
+
+
+// $ Grid media queries.
+// ========================================
+@mixin grid-mq($width) {
+  @if $width == min-sm {
+    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) {@content;}
+  }
+
+  @else if $width == max-sm {
+    @media only screen and (max-width: mq-unit($grid-query-width-sm)) {@content;}
+  }
+
+  @else if $width == min-md {
+    @media only screen and (min-width: mq-unit($grid-query-width-md + 1)) {@content;}
+  }
+
+  @else if $width == max-md {
+    @media only screen and (max-width: mq-unit($grid-query-width-md)) {@content;}
+  }
+
+  @else if $width == min-lg {
+    @media only screen and (min-width: mq-unit($grid-query-width-lg + 1)) {@content;}
+  }
+
+  @else if $width == max-lg {
+    @media only screen and (max-width: mq-unit($grid-query-width-lg)) {@content;}
+  }
+}
