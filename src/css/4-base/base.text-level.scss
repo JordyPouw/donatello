@@ -20,6 +20,7 @@
 //
 // Styleguide Base.TextLevel
 
+
 /* $ Text-level.
    ======================================== */
 h1, 
@@ -32,8 +33,6 @@ h6 {
   font-size: $default-heading-font-size;
   line-height: $default-heading-line-height;
 }
-
-p {font-size: em($default-font-size);}
 
 address {
   font-style: normal;
