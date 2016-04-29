@@ -1,0 +1,26 @@
+// Text
+//
+// Typography utilities.
+//
+// Markup:
+//<p class="u-text-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-small-capps">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-caps">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-no-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//
+// Styleguide Trumps.Utilities.Text
+
+
+.u-text-bold { font-weight: bold; }
+
+.u-text-italic { font-style: italic; }
+
+.u-text-caps { text-transform: uppercase; }
+
+.u-text-small-capps { font-variant: small-caps; }
+
+.u-text-underline { text-decoration: underline; }
+
+.u-text-no-wrap { white-space: nowrap; }
