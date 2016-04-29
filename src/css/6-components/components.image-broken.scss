@@ -1,0 +1,47 @@
+// Image Broken
+//
+// Adds a placeholder for broken images.
+// $('img').on('error', function () { $(this).addClass('c-image-broken'); });
+//
+// Markup:
+//
+//
+// Styleguide Component.ImageBroken
+
+$c-image-broken-border: 1px dashed $black;
+$c-image-broken-border-radius: 2px;
+$c-image-broken-background: $gray;
+
+$c-image-broken-content: attr(alt);
+$c-image-broken-padding: 10px;
+$c-image-broken-color: $black;
+$c-image-broken-font-size: 1rem;
+
+.c-image-broken {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    height: 100%;
+    border: $c-image-broken-border;
+    border-radius: $c-image-broken-border-radius;
+    background: $c-image-broken-background;
+  }
+
+  &:after {
+    content: $c-image-broken-content;
+    padding: $c-image-broken-padding;
+    color: $c-image-broken-color;
+    font-size: $c-image-broken-font-size;
+    text-align: center;
+  }
+}
