@@ -20,9 +20,6 @@
 // Styleguide Objects.Grid
 
 
-/* $ Grid system.
-   ======================================== */
-
 // grid clearfix.
 .#{$grid-prefix}#{$grid-row}:after {
   content: '';

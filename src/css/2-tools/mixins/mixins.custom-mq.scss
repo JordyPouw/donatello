@@ -5,8 +5,6 @@
 // Styleguide Tools.Mixins.CustomMq
 
 
-// $ Custom media queries.
-// ========================================
 @mixin custom-mq($min-max, $width) {
   @if $min-max == min {
     @media only screen and (min-width: mq-unit($width + 1)) {@content;}

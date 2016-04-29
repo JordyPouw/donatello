@@ -21,24 +21,20 @@
 // Styleguide Base.TextLevel
 
 
-/* $ Text-level.
-   ======================================== */
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   font-family: $default-heading-font-family;
   font-size: $default-heading-font-size;
   line-height: $default-heading-line-height;
 }
 
-address {
-  font-style: normal;
-}
+address { font-style: normal; }
 
-/* remove text-shadow in selection highlight for better readability. */
+// remove text-shadow in selection highlight for better readability.
 ::selection {
   background: $cowabunga;
   text-shadow: none;

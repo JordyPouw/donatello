@@ -5,8 +5,7 @@
 // Styleguide Tools.Mixins.GridSystem
 
 
-// $ Grid settings.
-// ========================================
+// $ grid settings.
 @mixin grid-setting($grid-media-query, $grid-method, $prop) {
   @for $index from 1 through $grid-columns {    
     // if push or pull, add 0.
@@ -29,8 +28,7 @@
 }
 
 
-// $ Build the grid.
-// ========================================
+// $ build the grid.
 @mixin build-grid($grid-media-query){
   @include grid-setting($grid-media-query, $grid-col, width);
   
@@ -48,8 +46,7 @@
 }
 
 
-// $ Grid media queries.
-// ========================================
+// $ grid media queries.
 @mixin grid-mq($width) {
   @if $width == min-sm {
     @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) {@content;}

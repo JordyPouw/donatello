@@ -5,8 +5,6 @@
 // Styleguide Tools.Functions.PxToMqUnit
 
 
-// $ Calculate px to em for media queries.
-// ========================================
 @function mq-unit($target) {
   @return ($target / 16px) * 1em;
 }

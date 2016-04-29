@@ -4,9 +4,10 @@
 // $('img').on('error', function () { $(this).addClass('c-image-broken'); });
 //
 // Markup:
-//
+//<img class="c-image-broken" src="img/im-not-here.jpg" alt="alt text of the image">
 //
 // Styleguide Component.ImageBroken
+
 
 $c-image-broken-border: 1px dashed $black;
 $c-image-broken-border-radius: 2px;
