@@ -1,21 +1,24 @@
 // Card
 //
 // Markup:
-
+//<section class="c-card">
+//  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit fugit alias tenetur quam voluptatum animi quos numquam illo. Maiores, doloribus!</p>
+//</section>
 //
-// Styleguide Components.Button
+// Styleguide Components.Card
 
 
-/* $ Button.
-   ======================================== */
-$c-card-border: 1px solid $black;
+$c-card-box-shadow: 0 0 3px rgba($black, 0.5);
+$c-card-display: block;
+$c-card-border: none;
 $c-card-border-radius: 2px;
 $c-card-padding: 10px;
 $c-card-color: $black;
 $c-card-background: $white;
 
 .c-card {
-  display: block;
+  box-shadow: $c-card-box-shadow;
+  display: $c-card-display;
   border: $c-card-border;
   border-radius: $c-card-border-radius;
   padding: $c-card-padding;
