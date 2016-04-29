@@ -10,31 +10,21 @@
 //<p class="u-align-left">Left</p>
 //<p class="u-align-center">Center</p>
 //<p class="u-align-right">Right</p>
+//<p class="u-align-justify">Justify</p>
 //
 // Styleguide Trumps.Utilities.Alignment
 
-/* $ Alignment.
-   ======================================== */
-.u-align-left {
-  text-align: left; 
-}
 
-.u-align-right {
-  text-align: right;
-}
+.u-align-left { text-align: left; }
 
-.u-align-center {
-  text-align: center;
-}
+.u-align-right { text-align: right; }
 
-.u-align-top {
-  vertical-align: top;
-}
+.u-align-center { text-align: center; }
 
-.u-align-bottom {
-  vertical-align: bottom;
-}
+.u-align-justify { text-align: justify; }
 
-.u-align-middle {
-  vertical-align: middle;  
-}
+.u-align-top { vertical-align: top; }
+
+.u-align-bottom { vertical-align: bottom; }
+
+.u-align-middle { vertical-align: middle; }
