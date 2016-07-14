@@ -3,7 +3,7 @@
 *.log
 *.sass-cache
 
- 
+
 # OS generated files. #
 ######################
 .DS_Store
@@ -25,4 +25,4 @@ bower_components
 ######################
 tmp
 dest
-kss_styleguide/styleguide
+kss_styleguide/
