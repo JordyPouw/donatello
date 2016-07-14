@@ -1,5 +1,5 @@
 // Disable Hover
-// 
+//
 // Utility class that disables pointer-events, useful for performance when scrolling.
 // - u-disable-hover
 //
@@ -7,6 +7,4 @@
 
 
 .u-disable-hover,
-.u-disable-hover * {
-  pointer-events: none !important;
-}
+.u-disable-hover * { pointer-events: none !important; }
