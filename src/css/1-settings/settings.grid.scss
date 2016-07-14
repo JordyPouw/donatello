@@ -1,25 +1,25 @@
 // Grid
 //
-// $grid-columns                - 12
-// $grid-row-width              - 1200px
-// $grid-gutter-width           - 20px
-// $grid-query-width-sm         - 568px
-// $grid-query-width-md         - 768px
-// $grid-query-width-lg         - 1024px
-// $grid-create-push            - false
-// $grid-create-pull            - false
-// $grid-create-offset          - false
-// $grid-prefix                 - g-
-// $grid-row                    - row12
-// $grid-row-suffix             - --fluid
-// $grid-col                    - col
-// $grid-push                   - push
-// $grid-pull                   - pull
-// $grid-offset                 - offset
-// $grid-suffix-xs              - --xs
-// $grid-suffix-sm              - --sm
-// $grid-suffix-md              - --md
-// $grid-suffix-lg              - --lg
+// $grid-columns          - 12
+// $grid-row-width        - 1200px
+// $grid-gutter-width     - 20px
+// $grid-query-width-sm   - 568px
+// $grid-query-width-md   - 768px
+// $grid-query-width-lg   - 1024px
+// $grid-create-push      - false
+// $grid-create-pull      - false
+// $grid-create-offset    - false
+// $grid-prefix           - g-
+// $grid-row              - row12
+// $grid-row-suffix       - --fluid
+// $grid-col              - col
+// $grid-push             - push
+// $grid-pull             - pull
+// $grid-offset           - offset
+// $grid-suffix-xs        - --xs
+// $grid-suffix-sm        - --sm
+// $grid-suffix-md        - --md
+// $grid-suffix-lg        - --lg
 //
 // Weight: 3
 //
@@ -48,3 +48,19 @@ $grid-suffix-xs:        --xs      !default;
 $grid-suffix-sm:        --sm      !default;
 $grid-suffix-md:        --md      !default;
 $grid-suffix-lg:        --lg      !default;
+
+
+// Alias Media queries
+//
+// Media query aliases useable for the mq() mixin.
+//
+// $sm - $grid-query-width-sm
+// $md - $grid-query-width-md
+// $lg - $grid-query-width-lg
+//
+// Styleguide Settings.Grid.AliasMq
+
+
+$sm: $grid-query-width-sm;
+$md: $grid-query-width-md;
+$lg: $grid-query-width-lg;
