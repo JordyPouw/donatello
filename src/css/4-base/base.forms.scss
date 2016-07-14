@@ -23,7 +23,7 @@
 //  <fieldset>
 //  <legend>Legend: select</legend>
 //    <select name="select">
-//      <option value="value1">Value 1</option> 
+//      <option value="value1">Value 1</option>
 //      <option value="value2" selected>Value 2</option>
 //      <option value="value3">Value 3</option>
 //    </select>
@@ -43,22 +43,20 @@
 // Styleguide Base.Forms
 
 
+$placeholder-color: $gray;
+
+
 fieldset {
   border: none;
   padding: 0;
 }
 
-label {
-  cursor: pointer;
-}
+label { cursor: pointer; }
 
-textarea {
-  resize: vertical;
-}
+textarea { resize: vertical; }
 
 input,
 textarea {
-  width: 100%;
   border-radius: 0;
   line-height: inherit;
 }
@@ -66,10 +64,6 @@ textarea {
 input:focus,
 select:focus,
 button:focus,
-textarea:focus {
-  outline: 0 none;
-}
+textarea:focus { outline: 0 none; }
 
-::placeholder {
-  color: $gray;
-}
+::placeholder { color: $placeholder-color; }

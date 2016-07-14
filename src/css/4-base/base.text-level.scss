@@ -21,6 +21,9 @@
 // Styleguide Base.TextLevel
 
 
+$selection-background: $blue;
+
+
 h1,
 h2,
 h3,
@@ -29,6 +32,7 @@ h5,
 h6 {
   font-family: $default-heading-font-family;
   font-size: $default-heading-font-size;
+  font-weight: $default-heading-font-weight;
   line-height: $default-heading-line-height;
 }
 
@@ -36,6 +40,6 @@ address { font-style: normal; }
 
 // remove text-shadow in selection highlight for better readability.
 ::selection {
-  background: $cowabunga;
+  background: $selection-background;
   text-shadow: none;
 }

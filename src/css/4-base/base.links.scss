@@ -6,14 +6,18 @@
 // Styleguide Base.Links
 
 
+$a-color: $black;
+$a-hover-color: $black;
+
+
 a {
-  color: $black;
+  color: $a-color;
   text-decoration: none;
   cursor: pointer;
 }
 
-a:hover, 
+a:hover,
 a:focus {
-  color: $black;
+  color: $a-hover-color;
   outline: 0;
 }
