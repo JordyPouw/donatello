@@ -1,7 +1,27 @@
 // Grid
 //
-// All the grid variables.
+// $grid-columns                - 12
+// $grid-row-width              - 1200px
+// $grid-gutter-width           - 20px
+// $grid-query-width-sm         - 568px
+// $grid-query-width-md         - 768px
+// $grid-query-width-lg         - 1024px
+// $grid-create-push            - false
+// $grid-create-pull            - false
+// $grid-create-offset          - false
+// $grid-prefix                 - g-
+// $grid-row                    - row12
+// $grid-row-suffix             - --fluid
+// $grid-col                    - col
+// $grid-push                   - push
+// $grid-pull                   - pull
+// $grid-offset                 - offset
+// $grid-suffix-xs              - --xs
+// $grid-suffix-sm              - --sm
+// $grid-suffix-md              - --md
+// $grid-suffix-lg              - --lg
 //
+// Weight: 3
 //
 // Styleguide Settings.Grid
 
@@ -13,9 +33,9 @@ $grid-query-width-sm:   568px     !default;
 $grid-query-width-md:   768px     !default;
 $grid-query-width-lg:   1024px    !default;
 
-$grid-create-push:      true      !default;
-$grid-create-pull:      true      !default;
-$grid-create-offset:    true      !default;
+$grid-create-push:      false     !default;
+$grid-create-pull:      false     !default;
+$grid-create-offset:    false     !default;
 
 $grid-prefix:           g-        !default;
 $grid-row:              row12     !default;
