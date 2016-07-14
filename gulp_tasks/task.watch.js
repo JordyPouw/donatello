@@ -1,11 +1,11 @@
-module.exports = function(gulp){
+module.exports = function (gulp) {
 
   'use strict';
 
 
   var config = require('./config')();
 
-  gulp.task('watch', ['server', 'browsersync'], function(){
+  gulp.task('watch', ['server', 'browsersync'], function () {
 
     gulp.watch('bower.json', ['bower']);
     gulp.watch('index.html').on('change', config.browsersync.reload);

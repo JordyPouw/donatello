@@ -1,11 +1,11 @@
-module.exports = function(gulp){
+module.exports = function (gulp) {
 
   'use strict';
 
 
   var config = require('./config')();
 
-  gulp.task('font', function(){
+  gulp.task('font', function () {
 
     return gulp.src('src/fonts/**/*')
       .pipe(gulp.dest(config.source.dest.font));

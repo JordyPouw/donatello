@@ -4,8 +4,8 @@ module.exports = function (gulp) {
 
 
   var config = require('./config')();
-  var fs = require('fs');  
-  
+  var fs = require('fs');
+
   // for all available settings:
   // https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json
   var settings = {
@@ -17,9 +17,7 @@ module.exports = function (gulp) {
 
     config.modernizr.build(settings, function (result) {
       fs.writeFile(config.source.tmp + 'modernizr.js', result, function (err) {
-        if(err) {
-          return console.log(err);
-        }
+        if(err) { return console.log(err); }
 
         gulp.src(config.source.tmp + 'modernizr.js')
           .pipe(config.plugins.uglify())

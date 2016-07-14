@@ -1,19 +1,19 @@
-module.exports = function(gulp){
+module.exports = function (gulp) {
 
   'use strict';
 
 
   return {
     // plugins.
-    browsersync    :   require('browser-sync'),
-    browserify     :   require('browserify'),
-    babelify       :   require("babelify"),
-    autoprefixer   :   require('autoprefixer'),
-    vss            :   require('vinyl-source-stream'),
-    buffer         :   require('vinyl-buffer'),
-    del            :   require('del'),
-    modernizr      :   require('modernizr'),
-    plugins        :   require('gulp-load-plugins')({
+    browsersync    : require('browser-sync'),
+    browserify     : require('browserify'),
+    babelify       : require("babelify"),
+    autoprefixer   : require('autoprefixer'),
+    vss            : require('vinyl-source-stream'),
+    buffer         : require('vinyl-buffer'),
+    del            : require('del'),
+    modernizr      : require('modernizr'),
+    plugins        : require('gulp-load-plugins')({
       rename: {
         'gulp-minify-css': 'cssmin',
         'gulp-main-bower-files': 'bower'
@@ -29,7 +29,7 @@ module.exports = function(gulp){
         img      : 'dest/img/',
         font     : 'dest/font/',
         sound    : 'dest/sound/',
-      } 
+      }
     }
   };
 

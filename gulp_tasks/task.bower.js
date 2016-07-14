@@ -1,4 +1,4 @@
-module.exports = function(gulp){
+module.exports = function (gulp) {
 
   'use strict';
 
@@ -28,7 +28,7 @@ module.exports = function(gulp){
       .pipe(filterJS.restore)
       .pipe(filterCSS)
       .pipe(config.plugins.concat('vendor.css'))
-      .pipe(gulp.dest(config.source.tmp))      
+      .pipe(gulp.dest(config.source.tmp))
       .pipe(config.plugins.cssmin())
       .pipe(config.plugins.rename({suffix: '.min'}))
       .pipe(gulp.dest(config.source.dest.css))

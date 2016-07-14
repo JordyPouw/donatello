@@ -1,11 +1,11 @@
-module.exports = function(gulp){
+module.exports = function (gulp) {
 
   'use strict';
 
-  
+
   var config = require('./config')();
 
-  gulp.task('js', function(){
+  gulp.task('js', function () {
 
     config.browserify({
       entries: 'src/js/index.js',
