@@ -1,12 +1,12 @@
 // Grid system
 //
-// grid-mq($width); - @include grid-mq(min/max-sm/md/lg)
+// Setup for the object grid.
 //
 // Styleguide Tools.Mixins.GridSystem
 
 
-// $ grid settings.
-@mixin grid-setting($grid-media-query, $grid-method, $prop) {
+// $ grid constructor.
+@mixin grid-constructor($grid-media-query, $grid-method, $prop) {
   @for $index from 1 through $grid-columns {
     // if push or pull, add 0.
     @if ($grid-method == $grid-push) and ($index == 1) or ($grid-method == $grid-pull) and ($index == 1){
@@ -27,120 +27,54 @@
   }
 }
 
-
-// $ build the grid.
-@mixin build-grid($grid-media-query){
-  @include grid-setting($grid-media-query, $grid-col, width);
+// $ grid preprocessor.
+@mixin grid-preprocessor($grid-media-query){
+  @include grid-constructor($grid-media-query, $grid-col, width);
 
   @if($grid-create-push == true){
-    @include grid-setting($grid-media-query, $grid-push, left);
+    @include grid-constructor($grid-media-query, $grid-push, left);
   }
 
   @if($grid-create-pull == true){
-    @include grid-setting($grid-media-query, $grid-pull, right);
+    @include grid-constructor($grid-media-query, $grid-pull, right);
   }
 
   @if($grid-create-offset == true){
-    @include grid-setting($grid-media-query, $grid-offset, margin-left);
+    @include grid-constructor($grid-media-query, $grid-offset, margin-left);
   }
 }
 
 
-// $ grid media queries.
-@mixin grid-mq($width-height1, $width-height2:unquote('')) {
-  @if $width-height1 == max-w-sm and $width-height2 == max-h-sm {
-    @media only screen and (max-width: mq-unit($grid-query-width-sm + 1)) and (max-height: mq-unit($grid-query-width-sm + 1)) { @content; }
+// Grid system media queries
+//
+// grid-mq($width); - @include grid-mq(min/max-sm/md/lg)
+//
+// Styleguide Tools.Mixins.GridSystem.Mq
+
+
+@mixin grid-mq($width) {
+  @if $width == min-sm {
+    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) {@content;}
   }
 
-  @else if $width-height1 == max-w-md and $width-height2 == max-h-md {
-    @media only screen and (max-width: mq-unit($grid-query-width-md + 1)) and (max-height: mq-unit($grid-query-width-md + 1)) { @content; }
+  @else if $width == min-md {
+    @media only screen and (min-width: mq-unit($grid-query-width-md + 1)) {@content;}
   }
 
-  @else if $width-height1 == max-w-lg and $width-height2 == max-h-lg {
-    @media only screen and (max-width: mq-unit($grid-query-width-lg + 1)) and (max-height: mq-unit($grid-query-width-lg + 1)) { @content; }
+  @else if $width == min-lg {
+    @media only screen and (min-width: mq-unit($grid-query-width-lg + 1)) {@content;}
   }
 
-  @else if $width-height1 == min-w-sm and $width-height2 == min-h-sm {
-    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) and (min-height: mq-unit($grid-query-width-sm + 1)) { @content; }
+  // additional media queries that are not required for the grid.
+  @else if $width == max-sm {
+    @media only screen and (max-width: mq-unit($grid-query-width-sm)) {@content;}
   }
 
-  @else if $width-height1 == min-w-md and $width-height2 == min-h-md {
-    @media only screen and (min-width: mq-unit($grid-query-width-md + 1)) and (min-height: mq-unit($grid-query-width-md + 1)) { @content; }
+  @else if $width == max-md {
+    @media only screen and (max-width: mq-unit($grid-query-width-md)) {@content;}
   }
 
-  @else if $width-height1 == min-w-lg and $width-height2 == min-h-lg {
-    @media only screen and (min-width: mq-unit($grid-query-width-lg + 1)) and (min-height: mq-unit($grid-query-width-lg + 1)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-sm and $width-height2 == max-w-md {
-    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) and (max-width: mq-unit($grid-query-width-md)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-sm and $width-height2 == max-w-lg {
-    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) and (max-width: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-md and $width-height2 == max-w-lg {
-    @media only screen and (min-width: mq-unit($grid-query-width-md + 1)) and (max-width: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-sm and $width-height2 == max-h-md {
-    @media only screen and (min-height: mq-unit($grid-query-width-sm + 1)) and (max-height: mq-unit($grid-query-width-md)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-sm and $width-height2 == max-h-lg {
-    @media only screen and (min-height: mq-unit($grid-query-width-sm + 1)) and (max-height: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-md and $width-height2 == max-h-lg {
-    @media only screen and (min-height: mq-unit($grid-query-width-md + 1)) and (max-height: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == max-w-sm {
-    @media only screen and (max-width: mq-unit($grid-query-width-sm)) { @content; }
-  }
-
-  @else if $width-height1 == max-w-md {
-    @media only screen and (max-width: mq-unit($grid-query-width-md)) { @content; }
-  }
-
-  @else if $width-height1 == max-w-lg {
-    @media only screen and (max-width: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == max-h-sm {
-    @media only screen and (min-height: mq-unit($grid-query-width-sm)) { @content; }
-  }
-
-  @else if $width-height1 == max-h-md {
-    @media only screen and (min-height: mq-unit($grid-query-width-md)) { @content; }
-  }
-
-  @else if $width-height1 == max-h-lg {
-    @media only screen and (min-height: mq-unit($grid-query-width-lg)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-sm {
-    @media only screen and (min-width: mq-unit($grid-query-width-sm + 1)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-md {
-    @media only screen and (min-width: mq-unit($grid-query-width-md + 1)) { @content; }
-  }
-
-  @else if $width-height1 == min-w-lg {
-    @media only screen and (min-width: mq-unit($grid-query-width-lg + 1)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-sm {
-    @media only screen and (min-height: mq-unit($grid-query-width-sm)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-md {
-    @media only screen and (min-height: mq-unit($grid-query-width-md)) { @content; }
-  }
-
-  @else if $width-height1 == min-h-lg {
-    @media only screen and (min-height: mq-unit($grid-query-width-lg)) { @content; }
+  @else if $width == max-lg {
+    @media only screen and (max-width: mq-unit($grid-query-width-lg)) {@content;}
   }
 }
