@@ -1,0 +1,63 @@
+// Hamburger icon
+//
+// Styleguide Components.HamburgerIcon
+
+
+.c-hamburger-icon {
+  overflow: hidden;
+  z-index: 1100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 70px;
+  height: 65px;
+  color: transparent;
+  white-space: nowrap;
+
+  // hide line in the center.
+  &.state-active span { background: rgba($black, 0); }
+
+  // keep visible other 2 lines.
+  &.state-active span:before,
+  &.state-active span:after { background: $black; }
+
+  &.state-active span:before { transform: translateX(4px) translateY(1px) rotate(45deg); }
+
+  &.state-active span:after { transform: translateX(4px) translateY(4px) rotate(-45deg); }
+}
+
+.c-hamburger-icon span {
+  // line in the center.
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: $black;
+  transition: background 0.3s;
+
+  // other 2 lines.
+  &:before,
+  &:after {
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    width: 25px;
+    background: $black;
+    content: '';
+    right: 0;
+    // force hardware acceleration in webkit.
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transform-origin: 0% 50%;
+    transition: transform 0.3s;
+  }
+
+  // top line.
+  &:before { top: -7px; }
+
+  // bottom line.
+  &:after { top: 7px; }
+}
