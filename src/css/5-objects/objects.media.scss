@@ -8,20 +8,16 @@
 
 
 .o-media,
-.o-media__body {
-  overflow:hidden;
-}
+.o-media__body { overflow: hidden; }
 
 .o-media__img {
-  float:left;
+  float: left;
   padding-right: 10px;
 
-  > img {
-    display:block;    
-  }
+  > img { display: block; }
 
   .o-media--rev & {
-    float:right;
+    float: right;
     padding-left: 10px;
   }
 }

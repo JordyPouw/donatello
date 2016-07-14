@@ -15,18 +15,12 @@
   display: table-cell;
   vertical-align: middle;
 
-  .o-flag--top & {
-    vertical-align: top;
-  }
+  .o-flag--top & { vertical-align: top; }
 
-  .o-flag--bottom & {
-    vertical-align: bottom;
-  }
+  .o-flag--bottom & { vertical-align: bottom; }
 }
 
-.o-flag__body {
-  width: 100%;
-}
+.o-flag__body { width: 100%; }
 
 .o-flag__img {
   padding-right: 10px;

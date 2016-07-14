@@ -1,7 +1,7 @@
 // List
 //
 // Markup:
-//<ul class="o-list--style-none">
+//<ul class="o-list">
 //  <li>item 1</li>
 //  <li>item 2</li>
 //  <li>item 3</li>
@@ -11,7 +11,7 @@
 // Styleguide Objects.List
 
 
-.o-list--style-none {
+.o-list {
   list-style: none;
   padding-left: 0;
 }

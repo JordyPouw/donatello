@@ -15,17 +15,18 @@
 
 .o-list-inline {
   list-style: none;
-  margin-left: -15px;
   padding-left: 0;
-  
+
   &:after {
     content: '';
     display: table;
     clear: both;
   }
-  
+
   & > li {
     float: left;
-    margin-left: 15px;
+    margin-right: 15px;
+
+    &:last-child { margin-right: 0; }
   }
 }

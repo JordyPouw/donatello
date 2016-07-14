@@ -1,10 +1,10 @@
 // Grid system
 //
-// The grid system Splinter is used to simplify responsive design. It's completely customizable 
+// The grid system Splinter is used to simplify responsive design. It's completely customizable
 // at the beginning of a project. *Note: changing the grid settings during a project can break the layout.*
 // The 12 column grid has 3 breakpoints and is designed mobile first:
 // - sm: 568px
-// - md: 768px 
+// - md: 768px
 // - lg: 1024px
 //
 // Markup:
@@ -20,7 +20,7 @@
 // Styleguide Objects.Grid
 
 
-// grid clearfix.
+// $ grid clearfix.
 .#{$grid-prefix}#{$grid-row}:after {
   content: '';
   display: table;
@@ -29,18 +29,18 @@
   .#{$grid-prefix}#{$grid-row} & {
 		content: '';
 		display: table;
-		clear: both;  	
+		clear: both;
   }
 }
 
-// grid fundamentals.
+// $ grid fundamentals.
 .#{$grid-prefix}#{$grid-row} {
   width: 100%;
   max-width: $grid-row-width;
   margin: 0 auto;
-  &#{$grid-row-suffix} {
-    max-width: none;
-  }
+
+  &#{$grid-row-suffix} { max-width: none; }
+
   & .#{$grid-prefix}#{$grid-row} {
     width: auto;
     max-width: none;
@@ -48,7 +48,7 @@
   }
 }
 
-[class^="#{$grid-prefix}#{$grid-col}"], 
+[class^="#{$grid-prefix}#{$grid-col}"],
 [class*=" #{$grid-prefix}#{$grid-col}"] {
   float: left;
   position: relative;
@@ -56,14 +56,11 @@
   padding: 0 ($grid-gutter-width / 2);
 }
 
-// mobile first.
-@include build-grid($grid-suffix-xs);
+// $ grid for xs, sm, md and lg devices.
+@include grid-preprocessor($grid-suffix-xs);
 
-// small devices.
-@include grid-mq(min-sm) {@include build-grid($grid-suffix-sm);}
+@include grid-mq(min-sm) { @include grid-preprocessor($grid-suffix-sm); }
 
-// medium devices.
-@include grid-mq(min-md) {@include build-grid($grid-suffix-md);}
+@include grid-mq(min-md) { @include grid-preprocessor($grid-suffix-md); }
 
-// large devices.
-@include grid-mq(min-lg) {@include build-grid($grid-suffix-lg);}
+@include grid-mq(min-lg) { @include grid-preprocessor($grid-suffix-lg); }
