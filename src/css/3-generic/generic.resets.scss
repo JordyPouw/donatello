@@ -1,22 +1,17 @@
 // Reset margin tags
 //
-// Box sizing model explain stuff here.
+// Reset margin tags explain stuff here.
 //
 // Styleguide Generic.ResetMarginTags
 
 
-ul,
-ol,
-dl,
-dd,
-blockquote,
 hr,
+ul, ol,
+dl, dd,
 table,
-form,
-fieldset,
+form, fieldset,
 figure,
 address,
-h1, h2, h3, h4, h5, h6,
-p {
-  margin: 0;
-}
+blockquote,
+p,
+h1, h2, h3, h4, h5, h6 { margin: 0; }
