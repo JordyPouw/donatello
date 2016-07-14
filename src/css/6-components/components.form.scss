@@ -1,29 +1,29 @@
 // Form
 //
 // Markup:
-//<form class="c-form" 
+//<form class="c-form"
 //      action="">
 //  <fieldset class="c-form__group">
 //    <legend class="c-form__group-title">Radio buttons</legend>
 //      <div class="c-form__control">
-//        <label> 
+//        <label>
 //          <input type="radio" name="sex" value="male">
 //          Male
 //        </label>
-//        <label> 
+//        <label>
 //          <input type="radio" name="sex" value="female">
 //          Female
 //        </label>
-//      </div>         
+//      </div>
 //  </fieldset>
 //  <fieldset class="c-form__group">
 //    <legend class="c-form__group-title">Checkbox buttons</legend>
 //      <div class="c-form__control">
-//        <label> 
+//        <label>
 //          <input type="checkbox" name="motors" value="harley-davidson">
 //          Harley Davidson
 //        </label>
-//        <label> 
+//        <label>
 //          <input type="checkbox" name="motors" value="suzuki">
 //          Suzuki
 //        </label>
@@ -84,7 +84,7 @@
 //  <fieldset class="c-form__group">
 //    <legend class="c-form__group-title">Now allowed</legend>
 //      <label class="c-form__control">
-//        Doesn't work 
+//        Doesn't work
 //        <input type="text" name="name" placeholder="Nope" disabled>
 //      </label>
 //      <label class="c-form__control">
@@ -144,20 +144,24 @@
 // Styleguide Components.Form
 
 
-$c-form-border-color: #c0392b;
-$c-form-font-color: #2c3e50;
-$c-form-placeholder: #95a5a6;
+$c-form-border-color: $black;
+$c-form-font-color: $black;
+$c-form-placeholder-color: $gray;
+
 
 .c-form {
   color: $c-form-font-color;
   font-size: 1rem;
-  & > .c-form__group:last-child {margin-bottom: 0;}
-  & ::placeholder {color: $c-form-placeholder;}
+
+  & .c-form__group:last-child { margin-bottom: 0; }
+
+  & ::placeholder { color: $c-form-placeholder-color; }
 }
 
 .c-form__group {
   margin-bottom: 20px;
-  & > .c-form__control:last-child {margin-bottom: 0;}
+
+  & > .c-form__control:last-child { margin-bottom: 0; }
 }
 
 .c-form__group-title {
@@ -170,8 +174,8 @@ $c-form-placeholder: #95a5a6;
   display: block;
   margin-bottom: 10px;
 
-  & label {display: block;}
-  
+  & label { display: block; }
+
   &--inline label {
     padding: 8px 0px;
     text-align: right;
@@ -197,10 +201,11 @@ $c-form-placeholder: #95a5a6;
     border: 1px solid $c-form-border-color;
     background: transparent;
     cursor: pointer;
-    &::-webkit-color-swatch-wrapper {padding: 0;}
+
+    &::-webkit-color-swatch-wrapper { padding: 0; }
   }
 
-  &[type="date"] {padding: 6px 10px;}
+  &[type="date"] { padding: 6px 10px; }
 
   &:disabled {
     cursor: not-allowed;
@@ -218,10 +223,10 @@ $c-form-placeholder: #95a5a6;
   width: 100%;
   height: 30px;
   border: 1px solid $c-form-border-color;
-  
-  &[multiple] {min-height: 120px;}
 
-  & option {padding: 6px 10px;}
+  &[multiple] { min-height: 120px; }
+
+  & option { padding: 6px 10px; }
 
   &:disabled {
     cursor: not-allowed;

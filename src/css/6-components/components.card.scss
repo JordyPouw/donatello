@@ -8,20 +8,13 @@
 // Styleguide Components.Card
 
 
-$c-card-box-shadow: 0 0 3px rgba($black, 0.5);
-$c-card-display: block;
-$c-card-border: none;
-$c-card-border-radius: 2px;
-$c-card-padding: 10px;
-$c-card-color: $black;
-$c-card-background: $white;
-
 .c-card {
-  box-shadow: $c-card-box-shadow;
-  display: $c-card-display;
-  border: $c-card-border;
-  border-radius: $c-card-border-radius;
-  padding: $c-card-padding;
-  color: $c-card-color;
-  background: $c-card-background;
+  box-shadow: 0 0 2px rgba($black, 0.9);
+  display: block;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: $black;
+  background: $white;
+  font-size: 1rem;
 }
