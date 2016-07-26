@@ -1,0 +1,44 @@
+// CSS healthcheck
+//
+// Run a visual healthcheck against our UI. By using substring selectors,
+// we can target and then visualise the general makeup of a page based
+// on the types of class it contains.
+//
+// Styleguide Sections.Healthcheck
+
+.s-healthcheck {
+  // outline all classes.
+  [class] { outline: 5px solid yellow; }
+
+  // outline all BEM elements where '__' appears somewhere in between.
+  [class*="__"] { outline: 5px solid aquamarine; }
+
+  // outline all BEM modifiers where '--' appears somewhere in between.
+  [class*="--"] { outline: 5px solid deeppink; }
+
+  // outline all object classes which begins with 'o-'
+  // or where the value appears somewhere in between.
+  [class^="o-"],
+  [class*=" o-"] { outline: 5px solid fuchsia; }
+
+  // outline all component classes which begins with 'c-'
+  // or where the value appears somewhere in between.
+  [class^="c-"],
+  [class*=" c-"] { outline: 5px solid cyan; }
+
+  // outline all section classes which begins with 's-'
+  // or where the value appears somewhere in between.
+  [class^="s-"],
+  [class*=" s-"] { outline: 5px solid burlywood; }
+
+  // outline all utility classes which begins with 'u-'
+  // or where the value appears somewhere in between.
+  [class^="u-"],
+  [class*=" u-"] { outline: 5px solid mediumblue; }
+
+  // outline all responsive classes where '@' appears somewhere in between.
+  [class*="@"] { outline: 5px solid rosybrown; }
+
+  // outline all hack classes which begins with '_'.
+  [class^="_"] { outline: 5px solid lime; }
+}
