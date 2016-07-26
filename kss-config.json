@@ -13,9 +13,9 @@
 
 "//": "relative to the generated style guide.",
   "css": ["../dest/css/main.min.css"],
-  "js" : [
-    "../../dest/js/modernizr.min.js",
-    "../../dest/js/vendor.min.js",
-    "../../dest/js/main.min.js"
+  "js": [
+    "../dest/js/modernizr.min.js",
+    "../dest/js/vendor.min.js",
+    "../dest/js/main.min.js"
   ]
 }
