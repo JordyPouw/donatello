@@ -5,6 +5,15 @@ module.exports = function (gulp) {
 
   var config = require('./config')();
   var fs = require('fs');
+  var path = require('path');
+
+  var mkdirSync = function (path) {
+    try {
+      fs.mkdirSync(path);
+    } catch (e) {
+      if ( e.code != 'EEXIST' ) throw e;
+    }
+  };
 
   // for all available settings:
   // https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json
@@ -15,9 +24,11 @@ module.exports = function (gulp) {
 
   gulp.task('modernizr', function() {
 
+    mkdirSync(path.join(config.source.tmp));
+
     config.modernizr.build(settings, function (result) {
       fs.writeFile(config.source.tmp + 'modernizr.js', result, function (err) {
-        if(err) { return console.log(err); }
+        if (err) { return console.log(err); }
 
         gulp.src(config.source.tmp + 'modernizr.js')
           .pipe(config.plugins.uglify())
