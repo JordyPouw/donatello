@@ -82,11 +82,31 @@ $c-form-placeholder-color: $gray;
     cursor: not-allowed;
     opacity: 0.75;
   }
+
+  &[data-feedback-activated]:valid { border: 1px solid $green; }
+
+  &[data-feedback-activated]:invalid {
+    border: 1px solid $red;
+    transition-delay: 1s;
+  }
 }
 
 .c-form__control textarea {
+  width: 100%;
   min-height: 80px;
   border: 1px solid $c-form-border-color;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+
+  &[data-feedback-activated]:valid { border: 1px solid $green; }
+
+  &[data-feedback-activated]:invalid {
+    border: 1px solid $red;
+    transition-delay: 1s;
+  }
 }
 
 .c-form__control select {
@@ -102,5 +122,12 @@ $c-form-placeholder-color: $gray;
   &:disabled {
     cursor: not-allowed;
     opacity: 0.75;
+  }
+
+  &[data-feedback-activated]:valid { border: 1px solid $green; }
+
+  &[data-feedback-activated]:invalid {
+    border: 1px solid $red;
+    transition-delay: 1s;
   }
 }
