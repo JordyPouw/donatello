@@ -36,9 +36,15 @@ $c-form-placeholder-color: $gray;
   display: block;
   margin-bottom: 10px;
 
-  & label { display: block; }
+  &.checkables-stacked label { display: block; }
 
-  &--inline label {
+  &.checkables-inline label {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  &.input-inline label {
+    display: block;
     padding: 8px 0px;
     text-align: right;
   }
@@ -63,7 +69,7 @@ $c-form-placeholder-color: $gray;
   &[type="checkbox"] {
     display: inline-block;
     width: 15px;
-    margin-right: 5px;
+    margin-right: 1px;
   }
 
   &[type="color"] {
