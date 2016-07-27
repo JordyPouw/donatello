@@ -1,18 +1,19 @@
 // Font-face
 //
-// font-face($font-family, $font-weight, $src); - @include font-face(font-family, font-weight, font-source)
+// font-face($font-family, $src, $font-weight, $font-style); - @include font-face(font-family, font-source, font-weight, font-style)
 //
 // Styleguide Tools.Mixins.Fontface
 
 
-@mixin font-face($font-family, $font-weight, $src) {
+@mixin font-face($font-family, $src, $font-weight:unquote('normal'), $font-style:unquote('normal')) {
   @font-face {
     font-family: $font-family;
-    src: url('#{$src}.eot');                                 // IE9 compat.
-    src: url('#{$src}.woff') format('woff'),                 // standard.
-         url('#{$src}.ttf') format('truetype'),              // safari, android, iOS.
-         url('#{$src}.svg##{$font-family}') format('svg');   // legacy iOS.
-    font-style: normal;
+    src: url('#{$src}.eot');                                 // ie9 compat.
+    src: url('#{$src}.woff2') format('woff2'),               // new standard.
+         url('#{$src}.woff') format('woff'),                 // standard.
+         url('#{$src}.ttf') format('truetype'),              // safari, android, ios.
+         url('#{$src}.svg##{$font-family}') format('svg');   // legacy ios.
     font-weight: $font-weight;
+    font-style: $font-style;
   }
 }
