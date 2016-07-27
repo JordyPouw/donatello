@@ -1,0 +1,18 @@
+// Font-face
+//
+// font-face($font-family, $font-weight, $src); - @include font-face(font-family, font-weight, font-source)
+//
+// Styleguide Tools.Mixins.Fontface
+
+
+@mixin font-face($font-family, $font-weight, $src) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$src}.eot');                                 // IE9 compat.
+    src: url('#{$src}.woff') format('woff'),                 // standard.
+         url('#{$src}.ttf') format('truetype'),              // safari, android, iOS.
+         url('#{$src}.svg##{$font-family}') format('svg');   // legacy iOS.
+    font-style: normal;
+    font-weight: $font-weight;
+  }
+}
