@@ -4,7 +4,7 @@
 // we can target and then visualise the general makeup of a page based
 // on the types of class it contains.
 //
-// Styleguide Sections.Healthcheck
+// Styleguide Scopes.Healthcheck
 
 .s-healthcheck {
   // outline all classes.
@@ -26,7 +26,7 @@
   [class^="c-"],
   [class*=" c-"] { outline: 5px solid cyan; }
 
-  // outline all section classes which begins with 's-'
+  // outline all scope classes which begins with 's-'
   // or where the value appears somewhere in between.
   [class^="s-"],
   [class*=" s-"] { outline: 5px solid burlywood; }
