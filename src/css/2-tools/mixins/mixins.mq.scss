@@ -37,7 +37,7 @@
   }
 
   @else if $min-max1 == max-h {
-    @media only screen and (min-height: mq-unit($width-height1)) { @content; }
+    @media only screen and (max-height: mq-unit($width-height1)) { @content; }
   }
 
   @else if $min-max1 == min-w {
