@@ -31,10 +31,3 @@ $cap-height: 0.68;
   padding-top: $baseline-distance + rem;
   padding-bottom: $default-line-height - $baseline-distance + rem;
 }
-
-.c-card h1,
-.c-card p {
-  @include baseline(16px);
-}
-
-.c-card h1 { @include baseline(24px); }
