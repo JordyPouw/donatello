@@ -1,0 +1,40 @@
+// Baseline
+//
+// https://medium.com/written-in-code/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b
+//
+// baseline($font-size, $scale: 2); - @include baseline(font-size, scale)
+//
+// Styleguide Tools.Mixins.Baseline
+
+
+// this value may vary for each font; unitless value relative to 1em.
+$cap-height: 0.68;
+
+@mixin baseline($font-size, $scale: 2) {
+  // rhythm unit.
+  $rhythm: $default-line-height * $font-size / $scale;
+
+  // number of rhythm units that can fit the font-size.
+  $lines: ceil(($font-size + 0.001px) / $rhythm);
+
+  // calculate the new line-height.
+  $line-height: $rhythm * $lines / $font-size;
+
+  // use the results.
+  font-size: $font-size;
+  line-height: $line-height;
+
+  $baseline-distance: ($line-height - $cap-height) / 2;
+
+  // you can use this mixin only on elements that have one direction margins.
+  // http://csswizardry.com/2012/06/single-direction-margin-declarations/
+  padding-top: $baseline-distance + rem;
+  padding-bottom: $default-line-height - $baseline-distance + rem;
+}
+
+.c-card h1,
+.c-card p {
+  @include baseline(16px);
+}
+
+.c-card h1 { @include baseline(24px); }
