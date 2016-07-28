@@ -3,14 +3,13 @@
 // Markup:
 //<div class="u-float-left">Left</div>
 //<div class="u-float-right">Right</div>
+//<div class="u-float-none">Default</div>
 //
 // Styleguide Trumps.Utilities.Floats
 
 
-.u-float-left {
-  float: left;
-}
+.u-float-left { float: left; }
 
-.u-float-right {
-  float: right;
-}
+.u-float-right { float: right; }
+
+.u-float-none { float: none; }

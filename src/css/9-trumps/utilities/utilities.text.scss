@@ -9,6 +9,8 @@
 //<p class="u-text-caps">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
 //<p class="u-text-underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
 //<p class="u-text-no-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
+//<p class="u-text-hyphenate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quis.</p>
 //
 // Styleguide Trumps.Utilities.Text
 
@@ -24,3 +26,15 @@
 .u-text-underline { text-decoration: underline; }
 
 .u-text-no-wrap { white-space: nowrap; }
+
+.u-text-ellipsis {
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.u-text-hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

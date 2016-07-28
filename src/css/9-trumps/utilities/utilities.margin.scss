@@ -1,5 +1,5 @@
 // Margins
-// 
+//
 // Give an element a margin with the value from the grid gutter width.
 // - u-marg-top
 // - u-marg-right
@@ -9,18 +9,10 @@
 // Styleguide Trumps.Utilities.Margins
 
 
-.u-marg-top {
-  margin-top: $grid-gutter-width;
-}
+.u-marg-top { margin-top: $grid-gutter-width; }
 
-.u-marg-right {
-  margin-right: $grid-gutter-width;
-}
+.u-marg-right { margin-right: $grid-gutter-width; }
 
-.u-marg-bottom {
-  margin-bottom: $grid-gutter-width;
-}
+.u-marg-bottom { margin-bottom: $grid-gutter-width; }
 
-.u-marg-left {
-  margin-left: $grid-gutter-width;
-}
+.u-marg-left { margin-left: $grid-gutter-width; }
