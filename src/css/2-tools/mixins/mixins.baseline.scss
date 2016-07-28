@@ -21,13 +21,13 @@ $cap-height: 0.68;
   $line-height: $rhythm * $lines / $font-size;
 
   // use the results.
-  font-size: $font-size;
+  font-size: em($font-size);
   line-height: $line-height;
 
   $baseline-distance: ($line-height - $cap-height) / 2;
 
   // you can use this mixin only on elements that have one direction margins.
   // http://csswizardry.com/2012/06/single-direction-margin-declarations/
-  padding-top: $baseline-distance + rem;
-  padding-bottom: $default-line-height - $baseline-distance + rem;
+  padding-top: $baseline-distance + em;
+  padding-bottom: $default-line-height - $baseline-distance + em;
 }
