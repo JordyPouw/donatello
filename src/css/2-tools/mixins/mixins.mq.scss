@@ -17,11 +17,11 @@
 
 @mixin mq($min-max1, $width-height1, $min-max2:unquote(''), $width-height2:unquote('')) {
   @if $min-max1 == max-w and $min-max2 == max-h {
-    @media only screen and (max-width: mq-unit($width-height1 + 1)) and (max-height: mq-unit($width-height1 + 1)) { @content; }
+    @media only screen and (max-width: mq-unit($width-height1 + 1)) and (max-height: mq-unit($width-height2 + 1)) { @content; }
   }
 
   @else if $min-max1 == min-w and $min-max2 == min-h {
-    @media only screen and (min-width: mq-unit($width-height1 + 1)) and (min-height: mq-unit($width-height1 + 1)) { @content; }
+    @media only screen and (min-width: mq-unit($width-height1 + 1)) and (min-height: mq-unit($width-height2 + 1)) { @content; }
   }
 
   @else if $min-max1 == min-w and $min-max2 == max-w {
@@ -45,6 +45,6 @@
   }
 
   @else if $min-max1 == min-h {
-    @media only screen and (min-height: mq-unit($width-height1)) { @content; }
+    @media only screen and (min-height: mq-unit($width-height1 + 1)) { @content; }
   }
 }
