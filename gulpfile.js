@@ -29,3 +29,4 @@ task('task.modernizr');
 task('task.server');
 task('task.sound');
 task('task.watch');
+task('task.rev');

@@ -16,7 +16,8 @@ module.exports = function (gulp) {
     plugins        : require('gulp-load-plugins')({
       rename: {
         'gulp-minify-css': 'cssmin',
-        'gulp-main-bower-files': 'bower'
+        'gulp-main-bower-files': 'bower',
+        'gulp-rev-append': 'rev'
       }
     }),
 
