@@ -19,6 +19,8 @@
     "gulp-plumber": "~1.0.0",
     "gulp-postcss": "~6.0.1",
     "gulp-rename": "~1.2.2",
+    "gulp-rev": "^7.1.0",
+    "gulp-rev-collector": "^1.0.5",
     "gulp-sass": "~2.1.0",
     "gulp-shell": "~0.5.0",
     "gulp-sourcemaps": "~1.6.0",
