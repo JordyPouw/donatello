@@ -9,6 +9,7 @@ module.exports = function (gulp) {
   gulp.task('server', function () {
 
     config.plugins.connect.server({
+      name: 'Server',
       root: path.resolve('./'),
       port: 8000
     });

@@ -11,8 +11,8 @@ module.exports = function (gulp) {
       proxy: 'http://localhost:8000',
       files: [
         'dest/css/vendor.css',
-        'dest/js/vendor.js',
         'dest/css/main.css',
+        'dest/js/vendor.js',
         'dest/js/main.js',
       ],
       logPrefix: 'Donatello',

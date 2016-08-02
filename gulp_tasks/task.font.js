@@ -7,7 +7,7 @@ module.exports = function (gulp) {
 
   gulp.task('font', function () {
 
-    return gulp.src('src/fonts/**/*')
+    return gulp.src('src/fonts/**/*.{eot,woff2,woff,ttf,svg}')
       .pipe(gulp.dest(config.source.dest.font));
 
   });

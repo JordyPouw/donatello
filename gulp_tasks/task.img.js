@@ -7,9 +7,15 @@ module.exports = function (gulp) {
 
   gulp.task('img', function () {
 
-    return gulp.src('src/img/**/*')
-      .pipe(config.plugins.imagemin({optimizationLevel: 6, progressive: true, interlaced: true}))
-      .pipe(gulp.dest(config.source.dest.img));
+    return config.imagemin(['src/img/**/*.{jpg,png}'], config.source.dest.img, {
+      plugins: [
+        config.mozjpeg({ targa: true }),
+        config.pngquant({ quality: '65-80' })
+      ]
+    })
+      .then(files => {
+        for (var i = 0; i < files.length; i++) { console.log(files[i].path); }
+      });
 
   });
 

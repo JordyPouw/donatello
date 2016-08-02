@@ -13,9 +13,9 @@ module.exports = function (gulp) {
     config.source.tmp
   ];
 
-  gulp.task('clean', function (callback) {
+  gulp.task('clean', function () {
 
-    config.del(dirs, callback);
+    return config.del.sync(dirs);
 
   });
 
